@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2026 중장년 창업컨설팅 지원사업 — 선정기업 참여자 매뉴얼</title>
+<meta name="description" content="서울시50플러스재단 × MYSC. 2026 중장년 창업컨설팅 지원사업 선정기업을 위한 참여자 매뉴얼. 4~11월 8개월간의 진단·멘토링·AI 특화·IR·데모데이 전 과정 안내." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0a0a;
+    --ink-2: #1a1a1a;
+    --text: #2a2a2a;
+    --text-sub: #555;
+    --text-mute: #888;
+    --line: #e8e8e8;
+    --line-soft: #f0f0f0;
+    --bg: #ffffff;
+    --bg-soft: #fafaf8;
+    --bg-tag: #f3f3f0;
+    --accent: #1a4d8f;
+    --accent-soft: #eaf1fb;
+    --accent-2: #c8932c;
+    --accent-2-soft: #fbf3df;
+    --required: #1a4d8f;
+    --required-bg: #eaf1fb;
+    --optional: #8a8a8a;
+    --optional-bg: #f0f0ee;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    color: var(--text); background: var(--bg);
+    font-size: 16px; line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
+  }
+  .mono { font-family: 'Inter', sans-serif; letter-spacing: 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 28px; }
+
+  /* 상단 메타 바 */
+  .meta-bar { border-bottom: 1px solid var(--line); padding: 14px 0; font-size: 13px; color: var(--text-mute); }
+  .meta-bar .inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .meta-bar .brand { font-weight: 700; color: var(--ink); letter-spacing: 0.02em; }
+  .meta-bar .badge { display: inline-block; padding: 2px 8px; border: 1px solid var(--line); border-radius: 3px; font-size: 11px; margin-left: 6px; color: var(--text-sub); }
+
+  /* 네비 */
+  nav.sticky { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  nav.sticky .inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 16px; flex-wrap: wrap; }
+  nav.sticky .nav-title { font-weight: 700; font-size: 14px; color: var(--ink); }
+  nav.sticky ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; flex-wrap: wrap; }
+  nav.sticky ul a { display: inline-block; padding: 6px 10px; font-size: 13px; color: var(--text-sub); border-radius: 4px; }
+  nav.sticky ul a:hover { background: var(--bg-soft); color: var(--ink); text-decoration: none; }
+
+  /* 히어로 */
+  .hero { padding: 88px 0 72px; border-bottom: 1px solid var(--line); }
+  .hero .eyebrow { font-size: 13px; color: var(--text-mute); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px; }
+  .hero h1 { font-size: 56px; line-height: 1.18; margin: 0 0 24px; font-weight: 900; color: var(--ink); letter-spacing: -0.03em; }
+  .hero h1 small { display: block; font-size: 22px; font-weight: 500; color: var(--text-sub); margin-top: 16px; letter-spacing: -0.01em; }
+  .hero .lead { font-size: 18px; color: var(--text-sub); max-width: 640px; margin: 0 0 36px; line-height: 1.8; }
+  .hero .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px 32px; padding-top: 32px; border-top: 1px solid var(--line); }
+  .hero .meta-grid > div .label { font-size: 12px; color: var(--text-mute); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; font-weight: 500; }
+  .hero .meta-grid > div .value { font-size: 16px; color: var(--ink); font-weight: 500; }
+
+  /* 섹션 공통 */
+  section.chapter { padding: 88px 0; border-bottom: 1px solid var(--line); }
+  .chapter-num { font-family: 'Inter', sans-serif; font-size: 120px; font-weight: 800; color: var(--ink); line-height: 0.9; letter-spacing: -0.04em; margin: 0 0 24px; }
+  .chapter-title { font-size: 38px; font-weight: 900; color: var(--ink); margin: 0 0 20px; letter-spacing: -0.02em; line-height: 1.25; }
+  .chapter-intro { font-size: 17px; color: var(--text-sub); line-height: 1.85; margin: 0 0 56px; max-width: 720px; }
+  .sub-h { font-size: 13px; color: var(--text-mute); letter-spacing: 0.1em; text-transform: uppercase; margin: 56px 0 16px; font-weight: 600; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .sub-h:first-child { margin-top: 0; }
+
+  h3.item-h { font-size: 22px; font-weight: 700; color: var(--ink); margin: 0 0 8px; letter-spacing: -0.015em; }
+  h3.item-h .tag { display: inline-block; vertical-align: middle; margin-left: 10px; padding: 3px 10px; font-size: 12px; font-weight: 600; border-radius: 4px; letter-spacing: 0; }
+  .tag-required { background: var(--required-bg); color: var(--required); }
+  .tag-optional { background: var(--optional-bg); color: var(--optional); }
+  .tag-highlight { background: var(--accent-2-soft); color: var(--accent-2); }
+  .meta-line { font-size: 13px; color: var(--text-mute); margin-bottom: 18px; }
+
+  /* 카드 */
+  .card-list { margin: 0; padding: 0; list-style: none; }
+  .card { padding: 32px 0; border-bottom: 1px solid var(--line-soft); }
+  .card:last-child { border-bottom: none; }
+  .card p { margin: 0 0 14px; color: var(--text); }
+  .card ul.bullets { margin: 14px 0 0; padding: 0; list-style: none; }
+  .card ul.bullets li { padding: 6px 0 6px 18px; position: relative; color: var(--text-sub); font-size: 15px; line-height: 1.7; }
+  .card ul.bullets li::before { content: ""; position: absolute; left: 0; top: 16px; width: 4px; height: 4px; border-radius: 50%; background: var(--text-mute); }
+
+  /* 신청 안내 불릿 */
+  .apply-bullets { margin: 16px 0; padding: 0; list-style: none; }
+  .apply-bullets li {
+    padding: 8px 0 8px 18px; position: relative;
+    color: var(--text-sub); font-size: 14px; line-height: 1.75;
+  }
+  .apply-bullets li::before {
+    content: ""; position: absolute; left: 0; top: 17px;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--text-mute);
+  }
+
+  /* 신청 단계 카드 */
+  .apply-item { padding: 36px 0; border-bottom: 1px solid var(--line); }
+  .apply-item:last-child { border-bottom: none; }
+  .apply-item:first-of-type { padding-top: 8px; }
+  .apply-number {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; font-weight: 700; color: var(--text-mute);
+    letter-spacing: 0.1em; margin-bottom: 12px;
+  }
+  .apply-title {
+    font-size: 26px; font-weight: 800; color: var(--ink);
+    margin: 0 0 12px; letter-spacing: -0.02em; line-height: 1.3;
+  }
+  .apply-title .req-tag {
+    display: inline-block; vertical-align: middle;
+    margin-right: 8px;
+    padding: 3px 10px; font-size: 12px; font-weight: 600;
+    border-radius: 4px; background: var(--required-bg); color: var(--required);
+    letter-spacing: 0;
+  }
+  .apply-desc { color: var(--text); margin: 0 0 20px; line-height: 1.8; }
+
+  /* 개요 박스 */
+  .info-table { display: grid; grid-template-columns: 110px 1fr; gap: 0; margin: 20px 0; border-top: 1px solid var(--line-soft); }
+  .info-table dt {
+    padding: 12px 0; font-weight: 700; color: var(--ink); font-size: 14px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .info-table dd {
+    padding: 12px 0; margin: 0; color: var(--text-sub); font-size: 14px;
+    border-bottom: 1px solid var(--line-soft);
+    line-height: 1.7;
+  }
+
+  /* 스텝 */
+  .step-list { margin: 20px 0; padding: 0; list-style: none; counter-reset: step-counter; }
+  .step-list li {
+    position: relative; padding: 16px 0 16px 56px;
+    border-bottom: 1px solid var(--line-soft);
+    counter-increment: step-counter;
+  }
+  .step-list li:last-child { border-bottom: none; }
+  .step-list li::before {
+    content: "STEP " counter(step-counter);
+    position: absolute; left: 0; top: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 700; color: var(--accent);
+    letter-spacing: 0.08em;
+    background: var(--accent-soft);
+    padding: 3px 8px; border-radius: 3px;
+  }
+  .step-list li strong { display: block; color: var(--ink); margin-bottom: 4px; font-size: 15px; }
+  .step-list li p { margin: 0; font-size: 14px; color: var(--text-sub); line-height: 1.75; }
+  .step-list li .note { display: block; margin-top: 4px; font-size: 13px; color: var(--text-mute); }
+
+  /* 링크 버튼 */
+  .link-button {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px; background: var(--accent); color: #fff !important;
+    border-radius: 6px; font-weight: 600; font-size: 14px;
+    text-decoration: none !important; margin: 6px 8px 6px 0;
+    transition: background 0.15s;
+  }
+  .link-button:hover { background: var(--ink); }
+  .link-button.outline {
+    background: var(--bg); color: var(--accent) !important;
+    border: 1px solid var(--accent);
+  }
+  .link-button.outline:hover { background: var(--accent-soft); }
+  .link-button .arrow { font-size: 12px; }
+
+  /* 주의사항 박스 */
+  .notice-box {
+    margin: 20px 0;
+    padding: 18px 22px; background: var(--bg-soft);
+    border-radius: 6px; border-left: 3px solid var(--text-mute);
+  }
+  .notice-box .notice-title {
+    font-size: 13px; font-weight: 700; color: var(--ink);
+    margin-bottom: 8px; letter-spacing: 0.02em;
+  }
+  .notice-box ul { margin: 0; padding: 0 0 0 16px; }
+  .notice-box li { font-size: 13px; color: var(--text-sub); line-height: 1.75; margin-bottom: 4px; }
+
+  /* 전체 유의사항 (강조) */
+  .important-notice {
+    margin: 40px 0 0;
+    padding: 22px 26px;
+    background: var(--required-bg);
+    border-radius: 6px; border-left: 3px solid var(--accent);
+  }
+  .important-notice strong { color: var(--accent); }
+  .important-notice .notice-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 700; color: var(--accent);
+    letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;
+  }
+  .important-notice p { margin: 0; color: var(--text); font-size: 14px; line-height: 1.75; }
+
+  /* PDF figure */
+  .pdf-figure { margin: 0 0 8px; padding: 0; }
+  .pdf-figure img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid var(--line); border-radius: 6px;
+    background: var(--bg-soft);
+  }
+  .pdf-figure figcaption {
+    margin-top: 10px; font-size: 12px; color: var(--text-mute);
+    letter-spacing: 0.02em;
+  }
+
+  /* MYSC 실적 KPI */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .kpi-cell { padding: 24px 20px; border-right: 1px solid var(--line); background: var(--bg-soft); }
+  .kpi-cell:last-child { border-right: none; }
+  .kpi-label { font-size: 12px; color: var(--text-mute); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; font-weight: 600; }
+  .kpi-value { font-family: 'Inter', sans-serif; font-size: 30px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 6px; }
+  .kpi-value small { font-size: 14px; font-weight: 600; color: var(--text-sub); margin-left: 2px; }
+  .kpi-sub { font-size: 12px; color: var(--text-mute); }
+
+  /* L.E.A.P. 4단계 */
+  .leap-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .leap-cell { padding: 28px 24px; border-right: 1px solid var(--line); background: var(--bg-soft); }
+  .leap-cell:last-child { border-right: none; }
+  .leap-letter { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 8px; letter-spacing: -0.03em; }
+  .leap-title { font-weight: 700; color: var(--ink); margin-bottom: 12px; font-size: 15px; }
+  .leap-sub { font-size: 13px; color: var(--text-mute); margin-bottom: 14px; }
+  .leap-bullets { list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--text-sub); line-height: 1.8; }
+  .leap-bullets li::before { content: "·  "; color: var(--text-mute); }
+
+  /* 월별 타임라인 (PDF 10페이지 스타일) */
+  .schedule-table { overflow-x: auto; margin: 0 -28px; padding: 0 28px; }
+  .schedule {
+    width: 100%; border-collapse: collapse; min-width: 760px;
+    font-size: 13px;
+  }
+  .schedule th, .schedule td {
+    border: 1px solid var(--line); padding: 12px 8px;
+    text-align: center; vertical-align: middle;
+    background: var(--bg);
+  }
+  .schedule thead th {
+    background: var(--bg-soft); font-weight: 700;
+    color: var(--ink); font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+  .schedule th.month-h { width: 9%; }
+  .schedule .row-label { background: var(--bg-soft); font-weight: 600; color: var(--ink); text-align: left; padding-left: 12px; min-width: 110px; }
+  .schedule .group-label { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+  .schedule .filled { background: var(--accent); color: #fff; font-weight: 600; font-size: 11px; line-height: 1.4; }
+  .schedule .filled-lite { background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 11px; line-height: 1.4; }
+  .schedule .filled-acc { background: var(--accent-2-soft); color: var(--accent-2); font-weight: 700; font-size: 11px; line-height: 1.4; }
+  .schedule .ot-cell { background: #ffe8b3; color: #8a5a00; font-weight: 700; font-size: 11px; }
+
+  /* 멘토 카드 */
+  .mentor-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .mentor { padding: 28px 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .mentor:nth-child(2n) { border-right: none; }
+  .mentor:nth-last-child(-n+2) { border-bottom: none; }
+  .mentor .campus { font-size: 12px; color: var(--accent); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .mentor h4 { margin: 0 0 4px; font-size: 22px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; }
+  .mentor .role { font-size: 14px; color: var(--text-sub); margin-bottom: 16px; }
+  .mentor .career { list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--text-sub); line-height: 1.75; }
+  .mentor .career li { padding: 3px 0 3px 12px; position: relative; }
+  .mentor .career li::before { content: "·"; position: absolute; left: 0; color: var(--text-mute); }
+  .mentor .specialty { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .mentor .specialty span { padding: 3px 8px; background: var(--bg-tag); color: var(--text-sub); font-size: 12px; border-radius: 3px; }
+
+  /* 시상 */
+  .prizes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--line); margin-top: 28px; }
+  .prize { padding: 24px 16px; text-align: center; border-right: 1px solid var(--line-soft); }
+  .prize:last-child { border-right: none; }
+  .prize .rank { font-size: 12px; color: var(--text-mute); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; margin-bottom: 8px; }
+  .prize .amount { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; }
+  .prize .amount small { font-size: 14px; font-weight: 500; color: var(--text-sub); margin-left: 2px; }
+
+  /* FAQ */
+  .faq { margin: 0; padding: 0; list-style: none; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary { list-style: none; cursor: pointer; padding: 24px 36px 24px 0; font-size: 17px; font-weight: 600; color: var(--ink); position: relative; transition: color 0.15s; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 0; top: 24px; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 28px; line-height: 1; color: var(--text-mute); transition: transform 0.2s; }
+  .faq details[open] summary::after { content: "−"; }
+  .faq summary:hover { color: var(--accent); }
+  .faq summary .q { font-family: 'Inter', sans-serif; font-weight: 600; color: var(--text-mute); margin-right: 12px; font-size: 14px; }
+  .faq .answer { padding: 0 36px 28px 0; color: var(--text-sub); font-size: 15px; line-height: 1.85; }
+
+  /* 인용 박스 */
+  .quote { margin: 32px 0; padding: 28px 32px; background: var(--bg-soft); border-left: 3px solid var(--accent); font-size: 17px; color: var(--ink); line-height: 1.8; font-weight: 500; }
+
+  /* 푸터 */
+  footer { padding: 64px 0 80px; color: var(--text-mute); font-size: 14px; }
+  footer .row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  footer .org { color: var(--ink); font-weight: 700; margin-bottom: 4px; }
+
+  /* 반응형 */
+  @media (max-width: 760px) {
+    body { font-size: 15px; }
+    .hero { padding: 56px 0 48px; }
+    .hero h1 { font-size: 36px; }
+    .hero h1 small { font-size: 17px; }
+    section.chapter { padding: 56px 0; }
+    .chapter-num { font-size: 72px; }
+    .chapter-title { font-size: 26px; }
+    .chapter-intro { font-size: 15px; }
+    .leap-grid, .kpi-grid { grid-template-columns: 1fr 1fr; }
+    .leap-cell, .kpi-cell { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .leap-cell:nth-child(2n), .kpi-cell:nth-child(2n) { border-right: none; }
+    .leap-cell:nth-last-child(-n+2), .kpi-cell:nth-last-child(-n+2) { border-bottom: none; }
+    .mentor-grid { grid-template-columns: 1fr; }
+    .mentor { border-right: none !important; }
+    .prizes { grid-template-columns: repeat(2, 1fr); }
+    .prize { border-bottom: 1px solid var(--line-soft); }
+    nav.sticky ul { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 상단 메타 바 -->
+<div class="meta-bar">
+  <div class="wrap inner">
+    <div><span class="brand">서울시50플러스재단 × MYSC</span> <span class="badge">2026</span></div>
+    <div>선정기업 참여자 매뉴얼</div>
+  </div>
+</div>
+
+<!-- 네비 -->
+<nav class="sticky">
+  <div class="wrap inner">
+    <div class="nav-title">중장년 창업컨설팅 지원사업</div>
+    <ul>
+      <li><a href="#overview">1. 사업 개요</a></li>
+      <li><a href="#mysc">2. 운영사 소개</a></li>
+      <li><a href="#strategy">3. 추진 전략</a></li>
+      <li><a href="#support">4. 지원 내용</a></li>
+      <li><a href="#schedule">5. 추진 일정</a></li>
+      <li><a href="#mentors">6. 전담 멘토</a></li>
+      <li><a href="#apply">7. 신청방법</a></li>
+      <li><a href="#faq">8. Q&amp;A</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 히어로 -->
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow mono">Participant Manual · 2026</div>
+    <h1>
+      2026 중장년<br>창업컨설팅<br>지원사업
+      <small>경험(Legacy)을 넘어 시장의 확산(Profit)으로 — 서울형 중장년 기술창업의 새로운 기준</small>
+    </h1>
+    <p class="lead">
+      서울시50플러스재단과 MYSC가 함께하는 8개월간의 통합 성장 프로그램.
+      선정기업의 단계적 성장을 위한 전주기 운영체계 — 진단·멘토링·AI 특화·IR·데모데이까지.
+    </p>
+    <div class="hero meta-grid">
+      <div>
+        <div class="label mono">Period</div>
+        <div class="value">2026.04 — 2026.11 (8개월)</div>
+      </div>
+      <div>
+        <div class="label mono">Structure</div>
+        <div class="value">진단 → 성장 → 연계 → 성과확산</div>
+      </div>
+      <div>
+        <div class="label mono">Operator</div>
+        <div class="value">MYSC × 서울시50플러스재단</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 01. 사업 개요 -->
+<section class="chapter" id="overview">
+  <div class="wrap">
+    <div class="chapter-num mono">01</div>
+    <h2 class="chapter-title">사업 개요</h2>
+    <p class="chapter-intro">
+      중장년의 풍부한 경력자산을 시장에서 작동하는 사업 모델로 전환하는 8개월간의 전주기 지원 프로그램입니다.
+      4월 모집을 시작으로 진단–멘토링–AI 특화교육–IR·오픈이노베이션–데모데이까지 단계적으로 연계되는 연간 추진체계로 운영됩니다.
+    </p>
+
+    <ul class="card-list">
+      <li class="card">
+        <h3 class="item-h">지원 대상</h3>
+        <div class="meta-line">서울시50플러스재단 4개 캠퍼스 선정 중장년 창업기업</div>
+        <p>북부·서부·중부·남부 4개 캠퍼스에서 선정된 중장년 창업가. 캠퍼스별 전담 멘토와 1:1 매칭되어 진행됩니다.</p>
+      </li>
+      <li class="card">
+        <h3 class="item-h">지원 기간</h3>
+        <div class="meta-line">2026년 4월 — 11월 · 약 8개월 (11월 정산 포함)</div>
+        <p>4월 모집·진단을 시작으로 10월 데모데이까지 진행되며, 11월에 최종 정산과 성과 정리가 이루어집니다.</p>
+      </li>
+      <li class="card">
+        <h3 class="item-h">운영 기관</h3>
+        <div class="meta-line">서울시50플러스재단 · 주식회사 엠와이소셜컴퍼니(MYSC)</div>
+        <p>서울시50플러스재단의 정책 자원과 MYSC의 임팩트 비즈니스 액셀러레이팅 역량이 결합된 통합 운영 체계입니다.</p>
+      </li>
+    </ul>
+
+    <div class="quote">
+      “경험(Legacy)을 넘어 시장의 확산(Profit)으로,<br>
+      서울형 중장년 기술창업의 새로운 기준을 세웁니다.”
+    </div>
+  </div>
+</section>
+
+<!-- 02. 운영사 소개 (MYSC) -->
+<section class="chapter" id="mysc">
+  <div class="wrap">
+    <div class="chapter-num mono">02</div>
+    <h2 class="chapter-title">운영사 소개 · MYSC</h2>
+    <p class="chapter-intro">
+      MYSC는 2011년 설립 이후 컨설팅·혁신성장기업 육성·임팩트 투자를 통해 공공기관·대기업·스타트업과 협력하며 혁신 생태계 구축에 기여해왔습니다.
+      <strong>2025년 상반기 투자 액셀러레이터 1위, 700개 VC/AC 중 전체 5위</strong>의 트랙 레코드를 보유하고 있습니다.
+    </p>
+
+    <div class="sub-h">일반현황 · 핵심 실적</div>
+    <figure class="pdf-figure">
+      <img src="images/mysc-overview.png" alt="MYSC 일반현황 — 2025년 상반기 투자 액셀러레이터 1위, 700개 VC/AC 중 전체 5위. 누적 육성 기업 1,000여건, 총 운용자산 1,084억원, 포트폴리오 288건. 자금조달 417억원, TIPS 165억원, LIPS 87.5억원." />
+      <figcaption>2026 중장년 창업컨설팅 지원사업 설명회 · 일반현황</figcaption>
+    </figure>
+
+    <div class="sub-h">시니어 비즈니스 투자 사례</div>
+    <p style="margin: 0 0 24px; color: var(--text-sub);">
+      MYSC는 현재까지 총 25개의 펀드를 조성하였으며, 매년 약 500여 개의 국내외 스타트업을 육성하고, 연간 50건 이상의 활발한 투자를 진행하고 있습니다.
+      특히 인구구조 변화에 따른 사회문제에 주목한 시니어 비즈니스 관련 투자를 꾸준히 해오고 있습니다.
+    </p>
+    <figure class="pdf-figure">
+      <img src="images/mysc-senior-cases.png" alt="MYSC 시니어 비즈니스 투자 사례 — 케어유, 캥스터즈, 복지유니온, 세븐포인트원, 포레인, 리무빙컴퍼니 등 6개 기업의 투자 및 성장 실적." />
+      <figcaption>시니어 비즈니스 관련 투자 포트폴리오 (6개사)</figcaption>
+    </figure>
+
+    <div class="sub-h">내외부 자원 연계</div>
+    <p style="margin: 0 0 24px; color: var(--text-sub);">
+      국내외 네트워크를 활용해 중장년 스타트업의 성장과 시장 확장을 적극 지원합니다.
+      <strong>2025년 싱가포르·태국 법인 설립</strong>을 통해 아시아 시장 진출을 본격화하며, 국내에서는 <strong>제주·호남·대구 지점</strong>을 통해 전국 단위의 협력 기반을 강화합니다.
+    </p>
+    <figure class="pdf-figure">
+      <img src="images/mysc-network.png" alt="MYSC 내외부 자원 연계 — 국내 분야별 파트너 및 지역 네트워크와 글로벌 자원연계." />
+      <figcaption>국내 및 글로벌 협력기업 및 전문가풀</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 03. L.E.A.P. 추진 전략 -->
+<section class="chapter" id="strategy">
+  <div class="wrap">
+    <div class="chapter-num mono">03</div>
+    <h2 class="chapter-title">L.E.A.P. 추진 전략</h2>
+    <p class="chapter-intro">
+      중장년 경력 자산의 비즈니스 퀀텀 점프 전략. 본 사업은 중장년의 경력자산을 시장 성과로 전환하는 L.E.A.P. 전략을 기반으로,
+      서울형 중장년 기술창업의 성장 기준을 새롭게 정립합니다.
+    </p>
+
+    <figure class="pdf-figure">
+      <img src="images/leap-strategy.png" alt="L.E.A.P. 추진 전략 — L(Legacy to Logic·경력의 비즈니스 모델화), E(Expertise Expansion·권역별 특화 전문성 확장), A(Accelerating Alliance·민관 협력 생태 가속), P(Pivot for Profit·성과 중심의 유연한 전환)의 4단계 모델." />
+      <figcaption>중장년 경력 자산의 비즈니스 퀀텀 점프 전략</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 04. 컨설팅 지원 세부 내용 -->
+<section class="chapter" id="support">
+  <div class="wrap">
+    <div class="chapter-num mono">04</div>
+    <h2 class="chapter-title">컨설팅 지원 세부 내용</h2>
+    <p class="chapter-intro">
+      총 8개월간 기업맞춤형 성장 지원 프로그램 운영.
+      본 사업은 진단–성장–연계–성과확산으로 이어지는 연간 타임라인 기반의 전주기 운영체계로 설계되었습니다.
+    </p>
+
+    <figure class="pdf-figure">
+      <img src="images/support-detail.png" alt="기업별 컨설팅 지원 세부 내용 — 사전 진단, 기업맞춤형(선배 창업가 강연·담임 멘토링·전문분야 특화 멘토링·온라인 창업교육), AI 특화(기본·심화 워크숍), 자금조달 및 판로확대(IR 제작·피칭 교육·오픈이노베이션 밋업·데모데이 및 성과공유회), 기업지원서비스." />
+      <figcaption>기업별 컨설팅 지원 세부 내용 (출처: 사업설명회자료 9페이지)</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 05. 추진 일정 (월별 타임라인) -->
+<section class="chapter" id="schedule">
+  <div class="wrap">
+    <div class="chapter-num mono">05</div>
+    <h2 class="chapter-title">전체 추진 일정</h2>
+    <p class="chapter-intro">
+      4월 모집을 시작으로 진단–멘토링–AI 특화교육–IR·오픈이노베이션–데모데이까지 단계적으로 연계되는 연간 추진체계로 운영됩니다.
+      기업 맞춤형 멘토링과 KPI 점검, 투자역량 강화 프로그램을 통해 성장 단계를 체계적으로 고도화하며,
+      최종적으로 성과공유회와 우수사례 확산을 통해 실질적 투자 연계와 정책성과 창출까지 완결하는 구조입니다.
+    </p>
+
+    <figure class="pdf-figure">
+      <img src="images/support-schedule.png" alt="전체 프로그램 추진 일정 — 4월부터 11월까지 8개월간의 월별 타임라인. 컨설팅 참여 안내·사전 종합 진단·오리엔테이션·기업맞춤형(선배 창업가 강연·담임 멘토링·전문분야 특화 멘토링·온라인 창업교육)·AI 특화(기본·심화 워크숍)·자금조달 및 판로확대(혼합금융 강의·IR 제작 및 피칭 교육·오픈이노베이션 밋업)·데모데이 및 성과공유회·우수사례 발굴 및 언론홍보·정산." />
+      <figcaption>전체 프로그램 추진 일정 (출처: 사업설명회자료 10페이지)</figcaption>
+    </figure>
+
+    <p style="margin-top:32px; font-size:14px; color:var(--text-mute);">
+      ※ 5월 <strong>OT</strong>는 OT(오리엔테이션)를 대체하여 진행된 <strong>역량강화교육</strong>으로, 선배 창업가 강연·AI 특화 기본교육이 함께 병행되었습니다.
+    </p>
+  </div>
+</section>
+
+<!-- 06. 캠퍼스별 전담 멘토 -->
+<section class="chapter" id="mentors">
+  <div class="wrap">
+    <div class="chapter-num mono">06</div>
+    <h2 class="chapter-title">캠퍼스별 전담 멘토</h2>
+    <p class="chapter-intro">
+      4개 캠퍼스에 1명씩 전담 멘토가 배정되어 있습니다. 담임 멘토는 8개월간 기업의 핵심 의사결정 파트너 역할을 하며,
+      필요 시 전문분야 특화 멘토를 추천·연결합니다.
+    </p>
+
+    <div class="sub-h">북부캠퍼스 · 이한선</div>
+    <figure class="pdf-figure">
+      <img src="images/mentor-bukbu.png" alt="북부캠퍼스 전담 멘토 이한선 — MYSC 벤처전문위원. 경력·자격·주요 프로젝트 활동 상세." />
+      <figcaption>전담멘토 소개 · 북부캠퍼스 이한선</figcaption>
+    </figure>
+
+    <div class="sub-h">서부캠퍼스 · 임종수</div>
+    <figure class="pdf-figure">
+      <img src="images/mentor-seobu.png" alt="서부캠퍼스 전담 멘토 임종수 — MYSC 시니어 디렉터. 경력·주요프로젝트·전문분야 상세." />
+      <figcaption>전담멘토 소개 · 서부캠퍼스 임종수</figcaption>
+    </figure>
+
+    <div class="sub-h">중부캠퍼스 · 임성준</div>
+    <figure class="pdf-figure">
+      <img src="images/mentor-jungbu.png" alt="중부캠퍼스 전담 멘토 임성준 — MYSC 벤처파트너, 파스타벤처스 대표, 한성대학교 AI응용학과 특임교수, 스타트업 관련 도서 작가, 엔젤투자자. 경력·대외활동·저서 상세." />
+      <figcaption>전담멘토 소개 · 중부캠퍼스 임성준</figcaption>
+    </figure>
+
+    <div class="sub-h">남부캠퍼스 · 최종옥</div>
+    <figure class="pdf-figure">
+      <img src="images/mentor-nambu.png" alt="남부캠퍼스 전담 멘토 최종옥 — MYSC 벤처파트너. 경력·주요 프로젝트 상세." />
+      <figcaption>전담멘토 소개 · 남부캠퍼스 최종옥</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 07. 단계별 신청방법 -->
+<section class="chapter" id="apply">
+  <div class="wrap">
+    <div class="chapter-num mono">07</div>
+    <h2 class="chapter-title">단계별 신청방법</h2>
+    <p class="chapter-intro">
+      사업 참여신청, 1:1 전담멘토링 신청, 온라인 창업교육(MYSClass) 수강, 기업지원서비스 신청 등 각 지원 항목의 신청 절차를 단계별로 안내합니다.
+    </p>
+
+    <!-- 1) 사업 참여 신청 -->
+    <article class="apply-item">
+      <div class="apply-number mono">01</div>
+      <h3 class="apply-title"><span class="req-tag">필수</span>사업 참여 신청</h3>
+      <p class="apply-desc">
+        본 사업에 참여하는 기업들에게 필요한 컨설팅 수요를 파악하고자 아래와 같이 설문을 진행하오니, 각 기업 대표자 및 예비창업자 분들의 협조 부탁드립니다.
+        지원해주신 기업들을 대상으로 1:1 멘토링 신청방법 및 기타 사업 관련 내용을 신청 이메일로 전달드립니다.
+      </p>
+      <a class="link-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeqSpA_jDQDO4vxyrPAKZIj9rESYvLtJcIrmk2q3npQ6ry9uQ/viewform" target="_blank" rel="noopener">
+        사업 참여신청 폼 열기 <span class="arrow">↗</span>
+      </a>
+    </article>
+
+    <!-- 2) 1:1 전담 멘토링 신청 -->
+    <article class="apply-item">
+      <div class="apply-number mono">02</div>
+      <h3 class="apply-title">1:1 전담 멘토링 신청</h3>
+      <p class="apply-desc">
+        담임 멘토와 1:1로 진행되는 미팅으로, 사전 제출한 기업 자가진단 결과물을 바탕으로 KPI 달성을 위한 현황 점검과 기업의 질의응답으로 진행됩니다.
+      </p>
+
+      <div class="sub-h" style="margin-top: 28px;">개요</div>
+      <dl class="info-table">
+        <dt>대상</dt><dd>컨설팅 사전 신청 기업 중 1차 1:1 멘토링 진행을 희망하는 기업</dd>
+        <dt>횟수</dt><dd>3회 내외</dd>
+        <dt>장소</dt><dd>오프라인 (멘토와 협의 가능)</dd>
+        <dt>시간</dt><dd>약 1시간 진행</dd>
+        <dt>참석자</dt><dd>멘토 + 참여기업 + MYSC 운영진 (1인 내외, 미정)</dd>
+        <dt>내용</dt><dd>사전 제출한 기업 자가진단 결과물을 바탕으로 멘토와 1:1 미팅 진행. 기업의 KPI 달성을 위한 현황 점검 및 기업 질의응답.</dd>
+      </dl>
+
+      <div class="sub-h" style="margin-top: 36px;">1:1 멘토링 신청 방법</div>
+
+      <div style="margin: 12px 0 18px; padding: 14px 18px; background: #fff5f5; border-left: 3px solid #c0392b; border-radius: 4px;">
+        <p style="margin: 0; color: #c0392b; font-weight: 700; font-size: 14px; line-height: 1.6;">
+          ⚠ 주의 — 구글폼을 통하여 <strong>사업 참여 신청</strong>을 완료하셔야 1:1 멘토링 신청이 가능합니다!
+        </p>
+      </div>
+
+      <ul class="apply-bullets">
+        <li>
+          신청 시트 링크를 클릭하여 본인 기업 <strong>전담 멘토 탭</strong>을 선택하고, 가능한 시간에 정보를 기입해주세요.
+          <span style="color: #c0392b;">(사업 참여 신청을 완료하셔야 엑셀에서 기업명을 찾을 수 있습니다. 임의로 기업명 셀을 수정하지 마세요!)</span>
+        </li>
+        <li>센터 입주기업의 경우 <strong>‘센터 입주기업’ 시트</strong>를 확인 후 가능한 시간에 정보 기입을 부탁드립니다.</li>
+        <li>본 미팅은 <strong>선착순 신청</strong>으로 진행되며, 현재 비어있는 일정 내에서 신청 부탁드립니다.</li>
+        <li>시트의 <strong>‘플랫폼 승인 요청’</strong> 항목은 아래 <strong>기업육성플랫폼 가입 후 ‘승인요청’</strong>으로 바꿔주세요.</li>
+        <li>시트의 <strong>‘플랫폼 기업자가진단표 완료’</strong> 항목은 기업육성플랫폼에서 <strong>기업자가진단표를 진행한 후 ‘예’</strong>로 바꿔주세요.</li>
+      </ul>
+      <a class="link-button" href="https://docs.google.com/spreadsheets/d/1Mv-CMceiOLPZ5kg6U8hv8JIjn87y3N6J9RssQJdQshE/edit?gid=1789010038#gid=1789010038" target="_blank" rel="noopener">
+        1:1 멘토링 신청 시트 열기 <span class="arrow">↗</span>
+      </a>
+
+      <div class="sub-h" style="margin-top: 36px;">사전 준비 — 기업육성플랫폼 회원가입 &amp; 사전기업진단 완료</div>
+      <ol class="step-list">
+        <li>
+          <strong>회원가입</strong>
+          <p>기업육성플랫폼 가입절차 가이드라인을 확인 후 회원가입을 먼저 진행합니다.</p>
+          <span class="note">※ 사전신청 이메일과 가입 아이디가 다르다면 시트 비고란에 내용을 남겨주세요.</span>
+          <div style="margin-top: 12px;">
+            <a class="link-button outline" href="files/(2026중장년)기업육성플랫폼_가입절차_(스타트업용)(v1.1).pdf" target="_blank" rel="noopener">
+              가입절차 가이드북 PDF <span class="arrow">↓</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <strong>운영진 승인 요청</strong>
+          <p>본인 기업 전담 멘토 탭에서 <em>‘승인요청’</em> 선택. 운영진 확인 후 <em>‘승인완료’</em>로 변경됩니다.</p>
+          <span class="note">※ 영업일 기준 1~2일 내 승인</span>
+        </li>
+        <li>
+          <strong>사전기업진단 완료</strong>
+          <p>1:1 멘토링 전, 반드시 기업육성플랫폼을 통한 사전기업진단을 완료해주세요.</p>
+          <span class="note">※ 가입절차 및 기능 관련 문의는 가이드북에 상세히 작성되어 있습니다.</span>
+        </li>
+      </ol>
+
+      <div class="notice-box" style="margin-top: 32px;">
+        <div class="notice-title">주의사항</div>
+        <ul>
+          <li>타기업에서 이미 작성하신 란을 <strong>삭제 및 수정하지 마시기</strong> 바랍니다.</li>
+          <li>이동·운전 중 또는 다른 업무와 병행하며 참여하는 것을 지양해주시고, 조용하고 분리된 장소에서 참석해주세요.</li>
+          <li>노쇼 및 지각은 멘토 및 운영진에 대한 매너가 아니므로 시작 시간을 준수해주시기 바랍니다.</li>
+          <li>부득이한 사정으로 연기·취소가 필요한 경우 <strong>최소 하루 전</strong>에 알려주세요. 갑작스러운 상황이나 기업 내 다른 분 참여가 필요한 경우 멘토님에게 꼭 연락해주세요.</li>
+          <li>신청 완료 후에도 기업명 확인이 불가한 경우 멘토님에게 연락 부탁드립니다.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 전체 유의사항 -->
+    <div class="important-notice">
+      <div class="notice-title mono">전체 유의사항</div>
+      <p><strong>사업참여신청</strong>과 <strong>기업육성플랫폼 가입</strong>을 모두 완료하셔야 1:1 멘토링 신청이 완료됩니다.</p>
+    </div>
+
+    <!-- 3) 온라인 창업교육 (MYSClass) 수강 -->
+    <article class="apply-item">
+      <div class="apply-number mono">03</div>
+      <h3 class="apply-title">온라인 창업교육 (MYSClass) 수강</h3>
+      <p class="apply-desc">
+        <strong>2026 중장년 창업컨설팅 1:1 멘토링 신청 기업</strong>에게만 공유되는 강의입니다.
+        1:1 멘토링 신청 기업을 대상으로 온라인 강의 수강 방법을 아래와 같이 안내드립니다.
+      </p>
+
+      <div class="info-table" style="grid-template-columns: 110px 1fr;">
+        <dt>접속</dt>
+        <dd>
+          <a href="https://mysclass.liveklass.com/" target="_blank" rel="noopener">https://mysclass.liveklass.com/</a><br>
+          <span style="font-size: 13px; color: var(--text-mute);">※ 원활한 이용을 위해 PC 접속 권장</span>
+        </dd>
+        <dt>대상</dt><dd>1:1 멘토링 신청 기업</dd>
+        <dt>운영사무국</dt><dd>㈜엠와이소셜컴퍼니</dd>
+      </div>
+
+      <div class="sub-h" style="margin-top: 36px;">수강 신청 방법</div>
+      <ol class="step-list">
+        <li>
+          <strong>MYSClass 접속 후 회원가입 진행</strong>
+          <p>상단 우측의 <em>회원가입</em> 버튼을 통해 가입을 진행합니다.</p>
+          <figure class="pdf-figure" style="margin-top: 14px;">
+            <img src="images/mysclass-signup.png" alt="MYSClass 사이트 상단 — 강의실 탭과 로그인·회원가입 버튼 위치" />
+            <figcaption>MYSClass 접속 · 강의실 탭 및 회원가입 위치</figcaption>
+          </figure>
+        </li>
+        <li>
+          <strong>상단 ‘강의실’ 탭 클릭</strong>
+          <p>상단 네비게이션의 강의실 메뉴에서 강의 목록으로 이동합니다.</p>
+        </li>
+        <li>
+          <strong>‘2026 중장년 창업컨설팅’ 강의 선택</strong>
+          <p>패키지 목록에서 해당 강의를 클릭합니다.</p>
+        </li>
+        <li>
+          <strong>‘패키지 신청’ 버튼 클릭</strong>
+          <p>강의 상세 페이지에서 패키지 신청 버튼을 누릅니다.</p>
+        </li>
+        <li>
+          <strong>기본정보 입력</strong>
+          <p>신청에 필요한 기본정보를 작성합니다.</p>
+        </li>
+        <li>
+          <strong>할인쿠폰 입력</strong>
+          <p>쿠폰번호는 <strong>멘토님들을 통해 확인</strong>해주세요.</p>
+          <figure class="pdf-figure" style="margin-top: 14px;">
+            <img src="images/mysclass-coupon.png" alt="MYSClass 강의 패키지 목록 및 할인쿠폰 등록 팝업" />
+            <figcaption>2026 중장년 창업컨설팅 패키지 선택 → 쿠폰 등록 화면</figcaption>
+          </figure>
+        </li>
+        <li>
+          <strong>쿠폰 등록 후 주의사항 동의 및 신청 완료</strong>
+          <p>주의사항을 확인하고 동의 후 신청을 마무리합니다.</p>
+        </li>
+        <li>
+          <strong>강의실 입장 후 수강 가능</strong>
+          <p>신청 완료 시점부터 강의실에서 자유롭게 수강할 수 있습니다.</p>
+        </li>
+      </ol>
+    </article>
+
+    <!-- 4) 기업지원서비스 -->
+    <article class="apply-item">
+      <div class="apply-number mono">04</div>
+      <h3 class="apply-title">기업지원서비스 신청</h3>
+      <p class="apply-desc">
+        기업별 최대 25만원 한도 내에서 ① 전문서비스 이용 수수료(세무·법무·특허 등) 또는 ② 인공지능 서비스 구독료(ChatGPT, Gemini 등) 중 택1하여 신청·이용하고 사후정산하는 서비스입니다.
+      </p>
+
+      <div class="sub-h" style="margin-top: 28px;">지원 개요</div>
+      <dl class="info-table">
+        <dt>지원 한도</dt><dd>기업별 최대 <strong>25만원</strong></dd>
+        <dt>지원 기간</dt><dd><strong>2026.05.08(금)</strong> ~ 2026.10.16(금)<br><span style="font-size:13px; color:var(--text-mute);">(※ 중도 퇴거기업은 ~ 퇴거일까지 이용건, 추가 입주 기업은 입주 후 ~ 지원기간 내의 이용건에 한함)</span></dd>
+        <dt>지원 대상</dt><dd>1:1 멘토링 완료 기업 대상 <strong>선착순 95개 기업</strong></dd>
+        <dt>운영사무국</dt><dd>㈜엠와이소셜컴퍼니</dd>
+      </dl>
+
+      <div class="sub-h" style="margin-top: 36px;">① 전문서비스 이용 수수료 (세무·법무·특허 등)</div>
+      <table class="schedule" style="margin: 0; font-size: 13px;">
+        <thead>
+          <tr><th style="width:90px;">구분</th><th>인정되는 증빙</th><th>유의사항</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2" style="background: var(--accent-soft); color: var(--accent); font-weight: 700; vertical-align: middle;">택 1</td>
+            <td style="text-align:left;"><strong>세금계산서</strong><br><span style="color:var(--text-sub);">사업자 명의 세금계산서 (공급자·공급받는자 기재)</span></td>
+            <td style="text-align:left; color:var(--text-sub);">세금계산서 발급 권장</td>
+          </tr>
+          <tr>
+            <td style="text-align:left;"><strong>영수증</strong><br><span style="color:var(--text-sub);">신용카드 매출전표 (간이영수증 불가)</span></td>
+            <td style="text-align:left; color:var(--text-sub);">사업자 명의 결제 원칙 (개인카드 시 담당자 확인)</td>
+          </tr>
+          <tr>
+            <td style="background: var(--required-bg); color: var(--required); font-weight: 700;">필수 제출</td>
+            <td style="text-align:left;"><strong>계약서 혹은 견적서</strong><br><span style="color:var(--text-sub);">서비스 이용 계약서 (계약금액 및 이용 내용 명시)</span></td>
+            <td style="text-align:left; color:var(--text-sub);">세금계산서·영수증과 함께 제출 권장</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="sub-h" style="margin-top: 36px;">② 인공지능 서비스 구독료 (ChatGPT, Gemini 등)</div>
+      <table class="schedule" style="margin: 0; font-size: 13px;">
+        <thead>
+          <tr><th style="width:90px;">구분</th><th>인정되는 증빙</th><th>유의사항</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2" style="background: var(--accent-soft); color: var(--accent); font-weight: 700; vertical-align: middle;">택 1</td>
+            <td style="text-align:left;"><strong>결제 내역서</strong><br><span style="color:var(--text-sub);">앱/웹 결제 내역 캡처 또는 PDF 출력</span></td>
+            <td style="text-align:left; color:var(--text-sub);">결제일·금액·서비스명 확인 가능해야 함</td>
+          </tr>
+          <tr>
+            <td style="text-align:left;"><strong>이메일 영수증</strong><br><span style="color:var(--text-sub);">결제 완료 후 발송된 이메일 영수증 출력</span></td>
+            <td style="text-align:left; color:var(--text-sub);">회사 법인 혹은 대표자 이름·이메일 확인 가능해야 함</td>
+          </tr>
+          <tr>
+            <td style="background: var(--required-bg); color: var(--required); font-weight: 700;">필수 제출</td>
+            <td style="text-align:left;"><strong>카드 명세서</strong><br><span style="color:var(--text-sub);">카드사 명세서 해당 항목 캡처 (서비스명·금액 포함)</span></td>
+            <td style="text-align:left; color:var(--text-sub);">회사 법인 혹은 대표자 명의의 카드 지출만 인정</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="sub-h" style="margin-top: 36px;">비용 청구 방법</div>
+      <dl class="info-table">
+        <dt>제출 기한</dt><dd>2026년 10월 19일(월) ~ 30일(금)</dd>
+        <dt>제출 방법</dt><dd>비용청구서 작성 후 제출</dd>
+        <dt>청구 서류</dt><dd>10월 초 담당자 별도 공지 예정</dd>
+      </dl>
+
+      <div class="notice-box" style="margin-top: 24px;">
+        <div class="notice-title">문의</div>
+        <ul style="list-style: none; padding: 0;">
+          <li>위 안내 외에 궁금한 사항은 담당자에게 언제든지 문의해 주세요.</li>
+          <li><strong>+82-(0)2-499-5111</strong> · <a href="mailto:2026seniorsupport@gmail.com">2026seniorsupport@gmail.com</a></li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 08. Q&A -->
+<section class="chapter" id="faq">
+  <div class="wrap">
+    <div class="chapter-num mono">08</div>
+    <h2 class="chapter-title">Q&amp;A</h2>
+    <p class="chapter-intro">
+      선정기업 참여자들이 가장 많이 묻는 질문을 정리했습니다.
+      이 외 궁금한 점은 담임 멘토 또는 운영사무국으로 문의해 주세요. (<strong>+82-(0)2-499-5111</strong> · <a href="mailto:2026seniorsupport@gmail.com">2026seniorsupport@gmail.com</a>)
+    </p>
+
+    <ul class="faq">
+      <li>
+        <details>
+          <summary><span class="q mono">Q.</span>담임 멘토는 어떻게 배정되나요?</summary>
+          <div class="answer">
+            소속된 50플러스 캠퍼스에 따라 자동으로 배정됩니다. 북부캠퍼스 이한선, 서부캠퍼스 임종수, 중부캠퍼스 임성준, 남부캠퍼스 최종옥 멘토가 담임을 맡으며, <strong>기업별 평균 3회 내외</strong>로 1:1 멘토링이 진행됩니다. 캠퍼스 외부의 전문 멘토를 만나고 싶다면, 담임 멘토와 협의 후 ‘전문분야 특화 멘토링’으로 연결됩니다.
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary><span class="q mono">Q.</span>전문분야 특화 멘토링은 어떻게 받을 수 있나요?</summary>
+          <div class="answer">
+            전체 풀에서 총 40회 내외로 운영되며, 기업별 횟수는 별도로 정해두지 않았습니다. 담임 멘토와 협의해 정말 필요한 분야(법률·특허·인사/노무·브랜딩·AI 등)에 집중해 활용해 주세요. 운영사가 캠퍼스 전체 풀에서 균형 있게 배분합니다.
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary><span class="q mono">Q.</span>AI를 잘 모르는데 따라갈 수 있을까요?</summary>
+          <div class="answer">
+            AI 특화 트랙은 비전공자·비개발자를 전제로 설계되어 있습니다. 5월 기본교육에서는 AI 리터러시(개념·도구 사용법)부터 시작하며, 본인 사업 도메인에 어떻게 접목할지 가설을 세우는 데 초점을 둡니다. 8월 심화에서는 자동화·에이전틱 전환을 실습 위주로 다룹니다.
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary><span class="q mono">Q.</span>온라인 창업교육(MYSClass)은 어떻게 듣나요?</summary>
+          <div class="answer">
+            <a href="#apply"><strong>7. 단계별 신청방법</strong></a> 페이지 확인.
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary><span class="q mono">Q.</span>기업지원서비스는 어떻게 신청하나요?</summary>
+          <div class="answer">
+            기업별 최대 25만원 한도 내에서 ① 세무·법무·특허 등 전문서비스 이용 수수료 또는 ② 인공지능 서비스(ChatGPT, Gemini 등) 구독료 중 택1하여 신청합니다. 신청기간은 5월 2주 OT시 안내, 이용기간은 안내일~10월, 사후정산(지급)은 11월 1~2주에 진행됩니다.
+            자세한 신청 절차는 <a href="#apply"><strong>7. 단계별 신청방법</strong></a> 페이지에서 확인해 주세요.
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary><span class="q mono">Q.</span>데모데이에는 모두 발표하나요?</summary>
+          <div class="answer">
+            모든 참여 기업이 발표 대상은 아닙니다. <strong>본 사업 참여기업 중 우수성과 8팀을 사전 선발</strong>하여, 참여기업의 성과공유와 VC 밋업을 통해 투자기회를 타진하고 후속투자와 사업확장으로 이어질 수 있는 <strong>지속 가능한 성장 연결고리 구축</strong>을 위한 자리입니다.
+            우수팀에 선발되기 위해서는 <strong>본 사업지원 프로그램에 적극적이고 꾸준한 참여</strong>가 필요합니다. 8개월간의 성장 궤적이 종합적으로 반영됩니다.
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary><span class="q mono">Q.</span>MYSC 직접 투자는 어떻게 결정되나요?</summary>
+          <div class="answer">
+            데모데이 발표 내용, 8개월간의 성장 궤적, MYSC의 임팩트 투자 기준(사회적 가치 + 시장성)을 종합 검토합니다. 1억원 이상의 투자 풀에서 우수 기업을 선정하며, 시상과는 별개의 트랙으로 진행됩니다.
+          </div>
+        </details>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 푸터 -->
+<footer>
+  <div class="wrap row">
+    <div>
+      <div class="org">MYSC × 서울시50플러스재단</div>
+      <div>2026 중장년 창업컨설팅 지원사업 · 선정기업 참여자 매뉴얼</div>
+    </div>
+    <div style="text-align:right;">
+      <div>운영사무국 · <strong style="color: var(--ink);">+82-(0)2-499-5111</strong></div>
+      <div><a href="mailto:2026seniorsupport@gmail.com">2026seniorsupport@gmail.com</a></div>
+      <div class="mono" style="margin-top:4px; color:var(--text-mute); font-size:13px;">Manual v2 · 2026.05</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
